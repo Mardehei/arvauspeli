@@ -6,6 +6,7 @@ export default function App() {
     <View style={styles.container}>
       <Text>meneekö githubiin</Text>
       <Text>Githubiin</Text>
+      <Text>Lisää testiä</Text>
       <StatusBar style="auto" />
     </View>
   );
