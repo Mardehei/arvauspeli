@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Button, TextInput, Alert } from 'react-native';
 import React from "react";
+import { SafeAreaView } from 'react-native-web';
 
 export default function App() {
 
@@ -24,9 +25,10 @@ export default function App() {
   }
 
   return (
+
     <View style={styles.container}>
       <Text>Guess a number between 1-100</Text>
-      <Text>{result}</Text>
+      
       <TextInput
           style={styles.input}
           onChangeText={number => setNumber(number)}
@@ -34,6 +36,7 @@ export default function App() {
           placeholder="Type your guess here"
           keyboardType="numeric"
         />
+        <Text>{result}</Text>
       <View style={{ flexDirection: "row" }}>
       <Button
         title="Make a guess"
@@ -42,6 +45,7 @@ export default function App() {
       />
       </View>
     </View>
+
   );
 }
 
@@ -52,4 +56,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  input: {
+    height: 40,
+    margin: 12,
+    borderWidth: 1,
+    padding: 10,
+  }
 });
